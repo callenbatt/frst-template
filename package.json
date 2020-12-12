@@ -1,12 +1,17 @@
 {
   "scripts": {
-    "start": "snowpack dev",
+    "start": "run-p dev start:*",
     "build": "snowpack build",
+    "dev": "snowpack dev",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "start:firebase": "firebase emulators:start",
+    "start:functions": "npm run watch --prefix functions"
   },
   "dependencies": {
+    "antd": "^4.9.2",
+    "firebase": "^8.2.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0"
   },
@@ -22,6 +27,7 @@
     "@types/snowpack-env": "^2.3.2",
     "@web/test-runner": "^0.10.0",
     "chai": "^4.2.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "snowpack": "^2.18.3",
     "typescript": "^4.0.0"
