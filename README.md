@@ -10,6 +10,7 @@ Runs the app in the development mode.
 Open http://localhost:8000 to view it in the browser.
 
 Runs the Firebase emulator suite.
+
     ┌────────────────┬────────────────┬──────────────────────────┐
     │ Emulator       │ Host:Port      │ View in Emulator UI      │
     ├────────────────┼────────────────┼──────────────────────────┤
